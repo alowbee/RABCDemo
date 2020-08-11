@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29911.84
+VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBACDemo", "SqliteDemo\RBACDemo.csproj", "{EF31452E-0019-485B-8235-37D00B50C7C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBACDemo", "RBACDemo\RBACDemo.csproj", "{EF31452E-0019-485B-8235-37D00B50C7C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {287BBDDE-28F3-43DB-9E42-51F07913F23C}
+		SolutionGuid = {F693174F-83FB-4916-84F3-0D6950535F7B}
 	EndGlobalSection
 EndGlobal
