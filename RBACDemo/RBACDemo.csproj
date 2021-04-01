@@ -79,31 +79,51 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Assist\SqliteAccessAssist.cs" />
-    <Compile Include="Data\Action.cs" />
-    <Compile Include="Data\Group.cs" />
-    <Compile Include="Data\User.cs" />
-    <Compile Include="SignInWindow.xaml.cs">
-      <DependentUpon>SignInWindow.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Assist\DataTableAssist.cs" />
+    <Compile Include="Assist\SqLiteAccessAssist.cs" />
+    <Compile Include="Converter\ComboBoxItemToString.cs" />
+    <Compile Include="DBAssist.cs" />
+    <Compile Include="MainWindowVM.cs" />
+    <Compile Include="Model\Action.cs" />
+    <Compile Include="Model\Group.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Pages\ActionPage.xaml.cs">
       <DependentUpon>ActionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\GroupPage.xaml.cs">
       <DependentUpon>GroupPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\GroupActionPage.xaml.cs">
+      <DependentUpon>GroupActionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserGroupPage.xaml.cs">
+      <DependentUpon>UserGroupPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\UserPage.xaml.cs">
       <DependentUpon>UserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SignIN\SignInVM.cs" />
+    <Compile Include="SignIn\SignUpWindow.xaml.cs">
+      <DependentUpon>SignUpWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sqlite-Net\SQLite.cs" />
+    <Compile Include="Sqlite-Net\SQLiteAsync.cs" />
+    <Compile Include="SqliteAssist.cs" />
+    <Compile Include="UCControls\ViewModel\UCSignUpVM.cs" />
+    <Compile Include="UCControls\ViewModel\UCSignInVM.cs" />
+    <Compile Include="SignIn\SignInWindow.xaml.cs">
+      <DependentUpon>SignInWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SQLiteHelper\SQLiteColumn.cs" />
     <Compile Include="SQLiteHelper\SQLiteColumnList.cs" />
     <Compile Include="SQLiteHelper\SQLiteHelper.cs" />
     <Compile Include="SQLiteHelper\SQLiteTable.cs" />
-    <Page Include="SignInWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="UCControls\UCSignIn.xaml.cs">
+      <DependentUpon>UCSignIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UCControls\UCSignUp.xaml.cs">
+      <DependentUpon>UCSignUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\UserDataToNameConverter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -124,7 +144,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\GroupActionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\UserGroupPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\UserPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignIn\SignInWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SignIn\SignUpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControls\UCSignIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UCControls\UCSignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,7 +200,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\WPFToolkit\WPFToolkit\WPFToolkit.csproj">
+      <Project>{ac7cc4fe-2f0e-45c8-bb0b-2ddc8d606481}</Project>
+      <Name>WPFToolkit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\VM\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.113.1\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -16,7 +16,7 @@ namespace RBACDemo
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            SqliteAccessAssist.SetDefaultDB();
+            SqLiteAccessAssist.SetDefaultDB();
            
            
         } 

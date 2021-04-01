@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:SqliteDemo"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/WPFToolkit;component/Color/AccentColor/BlueAccentColor.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/WPFToolkit;component/Color/PrimaryColor/DarkPrimaryColor.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/WPFToolkit;component/Color/ThemeBrush.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/WPFToolkit;component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

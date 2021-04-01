@@ -13,42 +13,56 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPFToolkit.Controls;
 
 namespace SqliteDemo
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : CustomWindow
     {
-        private SignInWindow loginwin = new SignInWindow();
+        private SignInWindow signinWindow = new SignInWindow();
         private UserPage userPage = new UserPage();
+        private UserGroupPage userGroupPage = new UserGroupPage();
         private GroupPage groupPage = new GroupPage();
         private ActionPage actionPage = new ActionPage();
+        private GroupActionPage groupActionPage = new GroupActionPage();
+        public static MainWindowVM viewmodel = new MainWindowVM();
         public MainWindow()
         {
+            signinWindow.ShowDialog();
             InitializeComponent();
+            this.DataContext = viewmodel;
+            viewmodel.SubContent = userPage;
         }
 
 
-        private void Login_Click(object sender, RoutedEventArgs e)
-        {         
-            loginwin.Show();
-        }
+ 
 
         private void User_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = userPage;
+            viewmodel.SubContent = userPage;
         }
 
         private void Action_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = actionPage;
+            viewmodel.SubContent = actionPage;
         }
 
         private void Group_Click(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = groupPage;
+            viewmodel.SubContent = groupPage;
+        }
+
+        private void UserGroup_Click(object sender, RoutedEventArgs e)
+        {
+            viewmodel.SubContent = userGroupPage;
+        }
+
+        private void GroupAction_Click(object sender, RoutedEventArgs e)
+        {
+            viewmodel.SubContent = groupActionPage;
         }
     }
 }

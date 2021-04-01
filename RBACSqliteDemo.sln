@@ -5,7 +5,15 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBACDemo", "RBACDemo\RBACDemo.csproj", "{EF31452E-0019-485B-8235-37D00B50C7C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFToolkit", "..\WPFToolkit\WPFToolkit\WPFToolkit.csproj", "{AC7CC4FE-2F0E-45C8-BB0B-2DDC8D606481}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WPFToolKit_Shared", "..\WPFToolkit\WPFToolKit_Shared\WPFToolKit_Shared.shproj", "{170047BE-FB8A-4674-AE9A-BF0DD54ECC89}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\WPFToolkit\WPFToolKit_Shared\WPFToolKit_Shared.projitems*{170047be-fb8a-4674-ae9a-bf0dd54ecc89}*SharedItemsImports = 13
+		..\WPFToolkit\WPFToolKit_Shared\WPFToolKit_Shared.projitems*{ac7cc4fe-2f0e-45c8-bb0b-2ddc8d606481}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -15,6 +23,10 @@ Global
 		{EF31452E-0019-485B-8235-37D00B50C7C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF31452E-0019-485B-8235-37D00B50C7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF31452E-0019-485B-8235-37D00B50C7C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC7CC4FE-2F0E-45C8-BB0B-2DDC8D606481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC7CC4FE-2F0E-45C8-BB0B-2DDC8D606481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC7CC4FE-2F0E-45C8-BB0B-2DDC8D606481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC7CC4FE-2F0E-45C8-BB0B-2DDC8D606481}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
